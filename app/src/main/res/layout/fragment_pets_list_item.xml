@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/image_pet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/title_pet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/space_20"
+        android:text="Animal"
+        android:textColor="@color/textColor"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="30sp"
+        android:textStyle="italic|bold" />
+</LinearLayout>

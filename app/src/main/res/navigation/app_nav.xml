@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/face_detector_nav"
+    app:startDestination="@id/petListFragment">
+
+    <fragment
+        android:id="@+id/petListFragment"
+        android:name="com.example.sepiaapp.pet.list.PetsListFragment"
+        android:label="Pet List"
+        tools:layout="@layout/fragment_pets_list" >
+        <action
+            android:id="@+id/action_List_to_DetailsFragment"
+            app:destination="@id/petDetailsFragment">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/petDetailsFragment"
+        android:name="com.example.sepiaapp.pet.details.PetDetailsFragment"
+        android:label="Pet Details"
+        tools:layout="@layout/fragment_pet_details" >
+        <action
+            android:id="@+id/action_Details_to_ListFragment"
+            app:destination="@id/petListFragment"
+            app:popUpTo="@id/petListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
