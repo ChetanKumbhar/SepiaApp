@@ -1,6 +1,7 @@
 package com.example.sepiaapp.hilt
 
 import android.content.Context
+import com.example.sepiaapp.helper.DateUtil
 import com.example.sepiaapp.helper.GsonHelper
 import com.example.sepiaapp.repo.PetListRepository
 import com.google.gson.Gson
@@ -17,8 +18,8 @@ import javax.inject.Singleton
 object PetListModule {
     @Provides
     @Singleton
-    fun providePetRepository(helper: GsonHelper): PetListRepository =
-        PetListRepository(helper)
+    fun providePetRepository(helper: GsonHelper,dateUtil: DateUtil): PetListRepository =
+        PetListRepository(helper,dateUtil)
 
     @Provides
     @Singleton
@@ -29,4 +30,9 @@ object PetListModule {
     @Singleton
     fun provideGson(): Gson =
        Gson()
+
+    @Provides
+    @Singleton
+    fun provideDateUtil(gsonHelper: GsonHelper): DateUtil =
+        DateUtil(gsonHelper)
 }

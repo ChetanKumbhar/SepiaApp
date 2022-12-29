@@ -1,5 +1,6 @@
 package com.example.sepiaapp.helper
 
+import androidx.annotation.VisibleForTesting
 import com.example.sepiaapp.model.Config
 import java.util.*
 import javax.inject.Inject
@@ -52,9 +53,12 @@ class DateUtil @Inject constructor(
     }
 
     private fun isNowBetweenDateTime(s: Date?, e: Date?): Boolean {
-        val now = Date()
+        val now = getDateNow()
         return now.after(s) && now.before(e)
     }
+
+    @VisibleForTesting
+    fun getDateNow() = Date()
 
     private fun getTime(format: String): Date? {
         val hms: List<String> = format.split(":")
@@ -64,7 +68,8 @@ class DateUtil @Inject constructor(
         return gc.time
     }
 
-    private fun getConfig(): Config {
+    @VisibleForTesting
+    fun getConfig(): Config {
         return gsonHelper.getTimeConfig()
     }
 

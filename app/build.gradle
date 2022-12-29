@@ -70,5 +70,29 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
 
+    // testing dependency
+    api 'junit:junit:4.13.2'
+    testApi 'junit:junit:4.13.2'
+
+    // mockK
+    api 'io.mockk:mockk:1.12.4'
+    testApi 'io.mockk:mockk:1.12.4'
+    api 'io.mockk:mockk-agent-jvm:1.12.4'
+    testApi 'io.mockk:mockk-agent-jvm:1.12.4'
+
+    // Kotlin Coroutine Test
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
+    testApi "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
+
+
+    // Android X Test, https://developer.android.com/training/testing/instrumented-tests/androidx-test-libraries/test-setup
+    api "androidx.test:core:1.4.0"
+    testApi "androidx.test:core:1.4.0"
+    api "androidx.test:core-ktx:1.4.0"
+    testApi "androidx.test:core-ktx:1.4.0"
+    api 'androidx.test.ext:junit:1.1.3'
+    testApi 'androidx.test.ext:junit:1.1.3'
+    api 'androidx.test.ext:junit-ktx:1.1.3'
+    testApi 'androidx.test.ext:junit-ktx:1.1.3'
 
 }

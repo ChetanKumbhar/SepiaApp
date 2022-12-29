@@ -1,7 +1,6 @@
 package com.example.sepiaapp.pet.list
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,13 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sepiaapp.R
-import com.example.sepiaapp.pet.viewModel.PetListViewModel
+import com.example.sepiaapp.pet.viewmodel.PetListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.appcompat.app.AppCompatActivity
-
-
-
-
 
 /**
  * A fragment representing a list of Pets.
@@ -71,7 +66,6 @@ class PetsListFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("chetan", "onResume: PetsListFragment")
         petListViewModel.checkConfigTime()
     }
 }

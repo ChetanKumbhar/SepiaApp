@@ -1,6 +1,7 @@
 package com.example.sepiaapp.helper
 
 import android.content.Context
+import androidx.annotation.VisibleForTesting
 import com.example.sepiaapp.model.Config
 import com.example.sepiaapp.model.PetList
 import com.google.gson.Gson
@@ -11,7 +12,8 @@ import javax.inject.Inject
 class GsonHelper @Inject constructor(
     private val context: Context,
     private val gson: Gson) {
-    private fun getJsonDataFromAsset(context: Context, fileName: String): String? {
+    @VisibleForTesting
+    fun getJsonDataFromAsset(context: Context, fileName: String): String? {
         val jsonString: String
         try {
             jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
